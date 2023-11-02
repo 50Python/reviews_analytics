@@ -27,7 +27,21 @@ for d in data: # 把 data 裡面的資料一筆一筆讀出來、放到 變數 d
 
 print('留言字串等於50的總數為: ', sum_len100) # 印出字串長度為50的總留言數
 
-#print('字串小於100: ',len(d) )
+print('===============================')
+print(" ")
+print(" ")
+len_50 = []
+for d in data: # 把 data 裡面的資料一筆一筆讀出來、放到 變數 d 裡面, data 有幾筆資料、就讀幾次
+	if len(d) == 50: # 假如讀取到 d 裡面的字串長度為 50
+		len_50.append(d) # 把字串長度為 50 的資料、加入倒 len_50[] 這個資料庫裏面
+print('長度50的字串總數為: ', len(len_50)) # len = lenth 長度的語法 , 印出 data 這個清單庫所有的資料筆數
+print(' ')
+print(' ')
+print(' ')
+print(*len_50) # 加上 * 可以讓字串庫一條一條自動往下列出來
 
-
-
+good = [] 
+for d in data: # 把 data 裡面的資料一筆一筆讀出來、放到 變數 d 裡面, data 有幾筆資料、就讀幾次
+	if 'good' in d: # 假如讀取到 d 裡面的字串有 good 這個字
+		good.append(d) # 把帶有 good 字眼的字串存到 good = [] 這個暫存清單裡面
+print('留言內容談到GOOD的字眼筆數', len(good)) # 印出在清單裡面帶有 good 字眼的留言總比數
